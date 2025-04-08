@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import Header from './components/Header';
 import Leaderboard from './components/Leaderboard';
 import TeamLeader from './components/TeamLeader';
