@@ -21,5 +21,7 @@ export const usernames: Record<string, string> = {
     '779518010976501790': 'mads',
     '228606915008004097': 'MacRobin',
     '587325527925325854': 'Santtu',
+    '578953155165814835': 'FireflyWishing',
+    '189810900327333889': 'Mintastic🎗',
   };
   
