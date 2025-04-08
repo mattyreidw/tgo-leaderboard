@@ -4,7 +4,7 @@ type PledgesSummary = {
   
   export default function TotalPledges({ pledges }: { pledges: PledgesSummary }) {
     return (
-      <div className="p-6 bg-gray-200 rounded-lg mb-6 h-40 flex flex-col justify-between">
+      <div className="flex-1 p-6 bg-gray-100 rounded-2xl h-40 flex flex-col justify-between">
       <div>
         <h2 className="text-md font-semibold">💰 Total Pledged</h2>
       </div>

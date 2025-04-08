@@ -10,7 +10,7 @@ export default function TopIndividual({ competitor }: { competitor: TopCompetito
   const displayName = usernames[competitor.id] ?? competitor.id;
 
   return (
-    <div className="p-6 bg-blue-100 border border-blue-300 rounded-lg mb-6 h-40 flex flex-col justify-between">
+    <div className="flex-1 p-6 bg-blue-300 rounded-2xl h-40 flex flex-col justify-between">
       <div>
         <h2 className="text-md font-semibold">🥇 Top Competitor</h2>
       </div>

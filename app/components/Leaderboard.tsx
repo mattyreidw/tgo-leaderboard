@@ -37,28 +37,31 @@ export default function Leaderboard({ teamData, individualData }: LeaderboardPro
   const roundToHundredth = (value: number) => Math.round(value * 100) / 100;
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 bg-white rounded-2xl p-6 border border-gray-200">
       {/* Toggle buttons */}
-      <div className="flex gap-4">
-        <button
-          onClick={() => setMode('team')}
-          className={`px-4 py-2 rounded transition cursor-pointer ${mode === 'team'
-            ? 'bg-blue-500 text-white'
-            : 'bg-gray-200 text-black'
-            }`}
-        >
-          Team
-        </button>
+      <div className="flex flex-col items-start md:flex-row md:items-center md:justify-between">
+        <h2 className="text-2xl font-semibold mb-2 md:mb-0">Leaderboards</h2>
+        <div className="inline-flex rounded-2xl bg-gray-100 gap-2 overflow-hidden p-2">
+          <button
+            onClick={() => setMode('team')}
+            className={`px-4 py-2 text-md transition cursor-pointer font-semibold ${mode === 'team'
+              ? 'bg-white text-black rounded-2xl shadow-sm'
+              : 'text-gray-700 rounded-2xl'
+              }`}
+          >
+            Team
+          </button>
 
-        <button
-          onClick={() => setMode('individual')}
-          className={`px-4 py-2 rounded transition cursor-pointer ${mode === 'individual'
-            ? 'bg-blue-500 text-white'
-            : 'bg-gray-200 text-black'
-            }`}
-        >
-          Individual
-        </button>
+          <button
+            onClick={() => setMode('individual')}
+            className={`px-4 py-2 text-md transition cursor-pointer font-semibold ${mode === 'individual'
+              ? 'bg-white text-black rounded-2xl shadow-sm'
+              : 'text-gray-700 rounded-2xl'
+              }`}
+          >
+            Individual
+          </button>
+        </div>
       </div>
 
       {/* Leaderboard Table */}
