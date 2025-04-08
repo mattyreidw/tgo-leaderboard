@@ -66,34 +66,34 @@ export default function Leaderboard({ teamData, individualData }: LeaderboardPro
 
       {/* Leaderboard Table */}
       <div>
-        <div className="rounded-lg border border-gray-200">
-          <div className="overflow-y-auto">
-            <table className="min-w-full text-left">
-              <thead className="bg-gray-100">
+        <div>
+          <div className="overflow-x-auto">
+            <table className="min-w-full text-left ">
+              <thead className="bg-white border-b border-gray-200">
                 <tr>
-                  <th className="p-3 text-left font-semibold">Rank</th>
+                  <th className="p-3 text-left font-semibold text-sm ">Rank</th>
                   {mode === 'team' ? (
                     <>
-                      <th className="p-3 text-left font-semibold">Team</th>
+                      <th className="p-3 text-left font-semibold text-sm">Team</th>
                     </>
                   ) : (
                     <>
-                      <th className="p-3 text-left font-semibold">User</th>
+                      <th className="p-3 text-left font-semibold text-sm">User</th>
                     </>
                   )}
-                  <th className="p-3 text-left font-semibold">🥾 Hiking</th>
-                  <th className="p-3 text-left font-semibold">🚴‍♂️ Cycling</th>
-                  <th className="p-3 text-left font-semibold">🏊‍♂️ Swimming</th>
-                  <th className="p-3 text-left font-semibold">🛶 Paddling</th>
-                  <th className="p-3 text-left font-semibold">🏆 Total</th>
+                  <th className="p-3 text-left font-semibold text-sm">Hiking</th>
+                  <th className="p-3 text-left font-semibold text-sm">Cycling</th>
+                  <th className="p-3 text-left font-semibold text-sm">Swimming</th>
+                  <th className="p-3 text-left font-semibold text-sm">Paddling</th>
+                  <th className="p-3 text-left font-semibold text-sm">Total</th>
                 </tr>
               </thead>
               <tbody>
                 {mode === 'team'
                   ? teamData.map((team, i) => (
-                    <tr key={team.id} className="odd:bg-gray-50">
+                    <tr key={team.id} className="bg-white border-b border-gray-200">
                       <td className="p-3">{i + 1}</td>
-                      <td className="p-3">
+                      <td className="p-3 font-semibold">
                         <TeamTooltip
                           teamName={team.name}
                           members={team.competitors.map((c) => ({
@@ -110,9 +110,9 @@ export default function Leaderboard({ teamData, individualData }: LeaderboardPro
                     </tr>
                   ))
                   : individualData.map((competitor, i) => (
-                    <tr key={competitor.id} className="odd:bg-gray-50">
+                    <tr key={competitor.id} className="bg-white border-b border-gray-200">
                       <td className="p-3">{i + 1}</td>
-                      <td className="p-3">
+                      <td className="p-3 font-semibold">
                         <UserTooltip
                           userId={usernames[competitor.id] ?? competitor.id}
                           teamName={competitor.team_name}
@@ -126,6 +126,7 @@ export default function Leaderboard({ teamData, individualData }: LeaderboardPro
                     </tr>
                   ))}
               </tbody>
+
             </table>
           </div>
         </div>
