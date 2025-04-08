@@ -15,7 +15,7 @@ export default function RecentActivity({ items }: { items: RecentPoint[] }) {
             <h2 className="text-2xl font-semibold pt-2">Recent Activity</h2>
             <ul className="space-y-1 text-gray-800">
                 {items.map((item, i) => (
-                    <li key={i}>
+                    <li className="border-b border-gray-200 pb-2" key={i}>
                         <span className="font-bold">
                             {usernames[item.competitor_id] ?? item.competitor_id}
                         </span>{' '}
