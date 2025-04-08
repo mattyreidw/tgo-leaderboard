@@ -67,7 +67,7 @@ export default function Leaderboard({ teamData, individualData }: LeaderboardPro
       {/* Leaderboard Table */}
       <div>
         <div className="rounded-lg border border-gray-200">
-          <div className="overflow-x-auto">
+          <div className="overflow-y-auto">
             <table className="min-w-full text-left">
               <thead className="bg-gray-100">
                 <tr>
