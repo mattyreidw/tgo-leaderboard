@@ -1,7 +1,7 @@
 // lib/queries/getRecentActivity.ts
 import pool from '@/lib/db';
 
-export async function getRecentActivity(limit = 5) {
+export async function getRecentActivity(limit = 6) {
   const query = `
     SELECT 
       points.value,
