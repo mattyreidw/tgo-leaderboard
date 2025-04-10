@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { getBeneficiariesWithTeams } from '@/lib/queries/getBeneficiariesWithTeams';
 import Banner from '../components/DonateBanner';
 import BeneficiaryFeed from '../components/BeneficiaryFeed';
