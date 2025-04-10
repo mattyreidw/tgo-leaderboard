@@ -9,7 +9,8 @@ type Props = {
 
 export default function BeneficiaryCard({ name, link, blurb, teams }: Props) {
   return (
-    <div className="space-y-4 bg-white rounded-2xl p-6 border border-gray-200 mb-6">
+    <div className="bg-white rounded-2xl border border-gray-200 mb-6">
+      <div className="p-6 space-y-4">
       <h2 className="text-2xl font-semibold">
         <Link
           href={link}
@@ -21,10 +22,13 @@ export default function BeneficiaryCard({ name, link, blurb, teams }: Props) {
         </Link>
       </h2>
       <p className="text-gray-700 mb-2">{blurb}</p>
-      <p className="text-sm text-gray-500">
-        Supported by:{' '}
-        <span className="font-medium">{teams.join(', ')}</span>
-      </p>
+      </div>
+      <div className="px-6 pt-2 pb-3 rounded-b-2xl border-t border-t-gray-200">
+        <p className="text-sm text-gray-500">
+          Supported by:{' '}
+          <span className="font-medium">{teams.join(', ')}</span>
+        </p>
+      </div>
     </div>
   );
 }
