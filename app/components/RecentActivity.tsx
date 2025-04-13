@@ -1,6 +1,7 @@
 'use client';
 
 import { usernames } from '@/lib/usernames';
+import Link from 'next/link';
 
 type RecentPoint = {
     value: number;
@@ -27,6 +28,7 @@ export default function RecentActivity({ items }: { items: RecentPoint[] }) {
                     </li>
                 ))}
             </ul>
+            <Link href="/activity-log" className="inline-block px-6 py-3 border border-gray-200 rounded-2xl hover:bg-gray-100 transition cursor-pointer">View full activity log</Link>
         </div>
     );
 }

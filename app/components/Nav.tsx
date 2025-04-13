@@ -10,6 +10,7 @@ import { Menu, X } from 'lucide-react';
 const links = [
   { name: 'Leaderboards', href: '/' },
   { name: 'Non-profits', href: '/non-profits' },
+  { name: 'Activity Log', href: '/activity-log' },
 ];
 
 export default function Nav() {
